@@ -152,12 +152,17 @@ As the number of servers increases from 2 to 6, the average load on each server 
 **Specific Data Points:**
 
 -N2: The average load is slightly above 5000.
+
 -N3: The average load decreases to around 4000.
+
 -N4: The average load further decreases to approximately 2000.
+
 -N5: The load continues to drop slightly below 2000.
+
 -N6: The average load is slightly above 1000.
 
 Analysis:
+
 **Load Distribution:**
 
 The chart indicates that as more servers are added, the load is more evenly distributed, resulting in a lower average load per server. This is expected behavior in a well-functioning load-balanced system.
