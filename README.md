@@ -156,10 +156,12 @@ N3: The average load decreases to around 4000.
 N4: The average load further decreases to approximately 2000.
 N5: The load continues to drop slightly below 2000.
 N6: The average load is slightly above 1000.
+
 Analysis:
 Load Distribution:
 
 The chart indicates that as more servers are added, the load is more evenly distributed, resulting in a lower average load per server. This is expected behavior in a well-functioning load-balanced system.
+
 Scalability:
 
 The system demonstrates good scalability, with the load on each server decreasing as more servers are added. This suggests that the load balancer effectively distributes requests across multiple servers.
