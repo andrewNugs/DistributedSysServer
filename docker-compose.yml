@@ -3,16 +3,22 @@ services:
   load_balancer:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Docker.loadbalancer
+    image: myproject_load_balancer
     ports:
       - "5000:5000"
-    networks:
-      - app-network
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - FLASK_ENV=development
+    privileged: true
 
   server1:
     build:
       context: .
       dockerfile: Docker.server
+      image: myproject_server
+    container_name: server_1
     ports:
       - "5001:5000"
     networks:
@@ -24,6 +30,8 @@ services:
     build:
       context: .
       dockerfile: Docker.server
+      image: myproject_server
+    container_name: server_2
     ports:
       - "5002:5000"
     networks:
@@ -35,6 +43,8 @@ services:
     build:
       context: .
       dockerfile: Docker.server
+      image: myproject_server
+    container_name: server_3
     ports:
       - "5003:5000"
     networks:
