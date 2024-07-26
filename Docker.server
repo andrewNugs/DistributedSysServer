@@ -8,7 +8,13 @@ WORKDIR /app
 COPY . /app
 
 # Install any needed packages
-RUN pip install flask hashids
+RUN pip install --no-cache-dir flask
+
+#Make port 5000 available
+EXPOSE 5000
+
+#Define environment variable for the server ID
+ENV SERVER_ID 1
 
 # Run server.py when the container launches
 CMD ["python", "server.py"] 
