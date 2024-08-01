@@ -4,7 +4,7 @@ services:
   load_balancer:
     build:
       context: .
-      dockerfile: ./load_balancer/Dockerfile
+      dockerfile: ./load_balancer_requirements/Dockerfile
     image: myproject_load_balancer
     ports:
       - "5000:5000"
