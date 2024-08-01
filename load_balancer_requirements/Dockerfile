@@ -28,4 +28,4 @@ WORKDIR /app
 EXPOSE 5000
 
 # Command to run the application
-CMD ["python", "load_balancer_requirements/load_balancer.py"]
+CMD ["python", "load_balancer/load_balancer.py"]
