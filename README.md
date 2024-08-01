@@ -98,10 +98,9 @@ Once the Docker containers are up and running, you can interact with the load ba
 ## Files
 
 - `server.py`: Contains the code for the server instances.
-- `consistent_hashing.py`: Contains the consistent hashing implementation.
 - `load_balancer.py`: Contains the code for the load balancer.
-- `Docker.loadbalancer`: Dockerfile for the load balancer.
-- `Docker.server`: Dockerfile for the server instances.
+- `load_balancer_requirements/Dockerfile`: Dockerfile for the load balancer.
+- `server_requirements/Dockerfile`: Dockerfile for the server instances.
 - `docker-compose.yml`: Docker Compose configuration to set up the services.
 
 ## Design Choices
