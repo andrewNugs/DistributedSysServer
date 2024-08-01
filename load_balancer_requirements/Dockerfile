@@ -9,10 +9,10 @@ WORKDIR /app
 COPY ./load_balancer_requirements/requirements.txt /app/load_balancer/requirements.txt
 
 # Change directory to where requirements.txt is located before installing
-WORKDIR /app/load_balancer_requirements
+WORKDIR /app/load_balancer
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the load_balancer directory contents into the current directory (/app/load_balancer)
+# Copy the load_balancer directory contents into the current directory
 COPY ./load_balancer_requirements /app/load_balancer 
 
 # Copy the myserver directory into /app/myserver
