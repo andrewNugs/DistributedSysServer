@@ -6,14 +6,14 @@ WORKDIR /app
 
 # Copy the requirements file and install Python dependencies
 # Ensure that you copy it into the same directory where you'll run pip install
-COPY ./load_balancer/requirements.txt /app/load_balancer/requirements.txt
+COPY ./load_balancer_requirements/requirements.txt /app/load_balancer/requirements.txt
 
 # Change directory to where requirements.txt is located before installing
-WORKDIR /app/load_balancer
+WORKDIR /app/load_balancer_requirements
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the load_balancer directory contents into the current directory (/app/load_balancer)
-COPY ./load_balancer /app/load_balancer 
+COPY ./load_balancer_requirements /app/load_balancer 
 
 # Copy the myserver directory into /app/myserver
 COPY ./myserver /app/myserver
@@ -28,4 +28,4 @@ WORKDIR /app
 EXPOSE 5000
 
 # Command to run the application
-CMD ["python", "load_balancer/load_balancer.py"]
+CMD ["python", "load_balancer_requirements/load_balancer.py"]
