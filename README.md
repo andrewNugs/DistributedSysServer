@@ -66,21 +66,9 @@ To install Docker Compose:
 ```bash
    curl -X DELETE http://localhost:5000/rm     -H "Content-Type: application/json"     -d '{"n": 1}'
 ```
-## Testing and Performance Analysis
+## Testing
 
-1. **/rep endpoint `c`** 
-
-![alt text](screenshot/image-1.png)
-
-2. **/heartbeat endpoint e.g for server at `http://localhost:5002/hearbeat` server_2**
-
-![alt text](screenshot/image-3.png)
-
-3. **/home endpoint e.g for server at  `http://localhost:5001/home` server_1**
-
-![alt text](screenshot/image-4.png)
-
-4. **/add endpoint**
+1. **/add endpoint**
 - provide the n field and a list of hostnames e.g adding 4:
 ``` bash
     curl -X POST http://localhost:5000/add -H "Content-Type: application/json" -d '{
@@ -88,8 +76,6 @@ To install Docker Compose:
     "hostnames": ["server_4", "server_5", "server_6", "server_7"]
 }'
 ```
-![alt text](screenshot/image-5.png)
-
 - If no provide hostnames, they are generated automatically based on the number n e.g adding 3 servers:
 
 ``` bash
@@ -97,8 +83,6 @@ To install Docker Compose:
     "n": 3
 }'
 ```
-![alt text](screenshot/image-6.png)
-
 - To simulate an *error* where the n field is missing in the JSON payload:
 
 ``` bash
@@ -106,13 +90,9 @@ To install Docker Compose:
     "hostnames": ["server_20", "server_21", "server_30"]
 }'
 ```
-![alt text](screenshot/image-7.png)
-
 - confirm the replicas in the server after adding processes
 
-![alt text](screenshot/image-8.png)
-
-5. **/rem endpoint**
+2. **/rem endpoint**
 - provide the n field and a list of hostnames to remove e.g. server_1 and server_2:
 ``` bash
     curl -X DELETE http://localhost:5000/rm -H "Content-Type: application/json" -d '{
@@ -120,8 +100,6 @@ To install Docker Compose:
     "hostnames": ["server_1", "server_2"]
 }'
 ```
-![alt text](screenshot/image-9.png)
-
 - No hostnames, they should be selected randomly to be removed e.g 3:
 ``` bash
     curl -X DELETE http://localhost:5000/rm -H "Content-Type: application/json" -d '{
