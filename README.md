@@ -53,27 +53,26 @@ curl -X DELETE http://localhost:5000/rm \
 ## Testing and Performance Analysis
 #### Load Distribution Among 3 Servers
 #### Observations
-!(screenshots/Screenshot(151).png) 
+![LoadDistribution](screenshots/Screenshot(151).png) 
 #### Analysis
 - The load distribution is uneven, with `server2` handling the most requests and `server3` handling the least.
 - Possible reasons for this discrepancy could include the network latency, or environmental factors.
 
 **Scalability with Incrementing Servers N from 2 to 6**
 #### Observations
- !(screenshots/Screenshot(152).png)
+![LoadIncrementWithServer](screenshots/Screenshot(152).png)
 #### Analysis
 - The average load per server decreases as the number of servers increases.
 - The load balancer scales efficiently with more servers.
 
 #### Load Balancer Recovery from Server Failure
 #### Observations
-!(screenshots/Screenshot(149).png)
- 
+![ServerFailure](screenshots/Screenshot(149).png)
 
 #### Observations:
 -The load balancer would switch them all off and start a new server instance.
 **A-4 Finally, modify the hash functions H(i), Φ(i, j) and report the observations from (A-1) and (A-2). **
 #### Load Distribution Among 3 Servers with modified hash functions H(i), Φ(i, j). 
 #### Observations
-!(screenshots/Screenshot(150).png)
+![Modified](screenshots/Screenshot(150).png)
 -As seen in the video, the loads were more fairly distributed than the others.
