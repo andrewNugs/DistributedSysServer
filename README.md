@@ -32,45 +32,48 @@ Run this command to install Docker Compose:
    make up
 ```
 1. **/rep endpoint `c`**
-   ![/rep endpoint](screenshots/Screenshot(156).png)
+   ![/rep endpoint](screenshots/Screenshot(153).png)
 
-3. **/heartbeat endpoint e.g for server at `http://localhost:5001/home` server1**
- 
-4. **/add endpoint**
+3. **/home endpoint e.g for server at `http://localhost:5001/home` server1**
+ ![/home endpoint](screenshots/Screenshot(154).png)
+
+5. **/add endpoint**
 Provide the n field and a list of hostnames e.g adding 4:
 curl -X POST http://localhost:5000/add \
      -H "Content-Type: application/json" \
      -d '{"server_id": "server4", "server_url": "http://server4:5000"}'
- 
-5. **/remove endpoint**
+ ![/add endpoint](screenshots/Screenshot(155).png)
+6. **/remove endpoint**
 Provide the n field and a list of hostnames e.g removing 4:
 curl -X DELETE http://localhost:5000/rm \
      -H "Content-Type: application/json" \
      -d '{"server_id": "server4"}' 
+![/rm endpoint](screenshots/Screenshot(156).png)
  
 ## Testing and Performance Analysis
 #### Load Distribution Among 3 Servers
 #### Observations
- 
+!(screenshots/Screenshot(151).png) 
 #### Analysis
 - The load distribution is uneven, with `server2` handling the most requests and `server3` handling the least.
 - Possible reasons for this discrepancy could include the network latency, or environmental factors.
 
 **Scalability with Incrementing Servers N from 2 to 6**
 #### Observations
- 
+ !(screenshots/Screenshot(152).png)
 #### Analysis
 - The average load per server decreases as the number of servers increases.
 - The load balancer scales efficiently with more servers.
 
 #### Load Balancer Recovery from Server Failure
 #### Observations
-
+!(screenshots/Screenshot(149).png)
  
 
 #### Observations:
 -The load balancer would switch them all off and start a new server instance.
 **A-4 Finally, modify the hash functions H(i), Φ(i, j) and report the observations from (A-1) and (A-2). **
-#### Load Distribution Among 3 Servers
+#### Load Distribution Among 3 Servers with modified hash functions H(i), Φ(i, j). 
 #### Observations
+!(screenshots/Screenshot(150).png)
 -As seen in the video, the loads were more fairly distributed than the others.
