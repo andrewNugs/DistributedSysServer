@@ -32,8 +32,9 @@ Run this command to install Docker Compose:
    make up
 ```
 1. **/rep endpoint `c`** 
-!(screenshots/Screenshot (156).png")
-2. **/heartbeat endpoint e.g for server at `http://localhost:5001/home` server1**
+![Alt text](./screenshots/Screenshot (156).png")
+
+3. **/heartbeat endpoint e.g for server at `http://localhost:5001/home` server1**
  
 4. **/add endpoint**
 Provide the n field and a list of hostnames e.g adding 4:
