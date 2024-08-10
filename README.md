@@ -31,8 +31,8 @@ Run this command to install Docker Compose:
 ```bash
    make up
 ```
-1. **/rep endpoint `c`** 
-![Alt text](./screenshots/Screenshot (156).png")
+1. **/rep endpoint `c`**
+   ![/rep endpoint](screenshots/Screenshot(156).png)
 
 3. **/heartbeat endpoint e.g for server at `http://localhost:5001/home` server1**
  
